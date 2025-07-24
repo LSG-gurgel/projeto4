@@ -38,3 +38,9 @@ highPerformingActiveStudents.forEach((student) => console.log(student.name));
 
 const inactiveStudents = students.filter(student => !student.active);
 console.log("Os estudantes inativos são \n", inactiveStudents); 
+
+// Letras b do desafio: encontrar o estudante com o id = 3
+
+const studentId3 = students.find(student => student.id === 3);
+console.log(
+  "\nEstudante com o id 3 é:", studentId3.name);
