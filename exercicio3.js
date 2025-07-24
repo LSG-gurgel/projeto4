@@ -44,3 +44,12 @@ console.log("Os estudantes inativos são \n", inactiveStudents);
 const studentId3 = students.find(student => student.id === 3);
 console.log(
   "\nEstudante com o id 3 é:", studentId3.name);
+
+// Letra c do desafio: estudantes que tiraram pelo mens uma nota abaixo de 70
+
+const lowerThan70 = students.filter(student => student.grades.some(grade => grade < 70));
+
+console.log("Estudantes com pelo menos uma nota menor que 70:");
+lowerThan70.forEach(students => {
+    console.log(`- ${students.name}`);
+});
