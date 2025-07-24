@@ -53,3 +53,13 @@ console.log("Estudantes com pelo menos uma nota menor que 70:");
 lowerThan70.forEach(students => {
     console.log(`- ${students.name}`);
 });
+
+// Letra d do desafio: obter os nomes dos estudantes com média > 85
+
+const averageHigh = students.filter(student => {
+    const sum = student.grades.reduce((accumulator, grade) => accumulator + grade, 0);
+    const average = sum / student.grades.length;
+    return average > 85;
+})
+.map(student => student.name);
+console.log("Estudantes com média acima de 85:", averageHigh);
