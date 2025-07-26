@@ -7,13 +7,6 @@ const produtos= [
     {id: 3, nome: "Mel", preco: 30.000 , categoria: "Categoria 1"},
 ]
 
-const produto= produtos.filter((el)=>{
-    if(el.preco > 25.00){
-        return el;
-    }
-})
-
-
 function StringF(produtos){
     return produtos
     .map((produto)=> produto.nome + " - "+ produto.categoria);
