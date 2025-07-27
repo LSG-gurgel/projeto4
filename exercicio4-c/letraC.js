@@ -6,6 +6,9 @@ const tasks = [
     { id: 5, title: "Estudar JavaScript", completed: false, priority: "média" }
 ];
 
-const lowPriorityTask = tasks.some (
-    tasks => tasks.completed === true && tasks.priority === "baixa" );
- console.log("Existe alguma tarefa de baixa prioridade completa? \n ",lowPriorityTask);
+const allTasksIncomplete = tasks.every ( tasks => !tasks.completed && tasks.priority === "alta");
+    console.log("Tarefas de alta prioridade incompletas: ",allTasksIncomplete);
+
+    if (allTasksIncomplete == false){
+        console.log("Todas as tarefas de alta prioridade estçao feitas")
+    };
