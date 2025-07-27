@@ -1,0 +1,12 @@
+//Crie uma função que recebe um objeto person e retorna um novo objeto com todas as propriedades do original, mais uma propriedade "isAdult" (true se age >= 18)
+function acrescentarIsAdult(person) {
+	return {...person, isAdult: person.age >= 18};
+}
+const person1 = {name: "Lorena", age:"38"}
+const person2 = {name: "Maria", age:"72"}
+const person3 = {name: "Natália", age:"13"};
+
+
+console.log(acrescentarIsAdult(person1)); // { name: 'Lorena', age: 38, isAdult: true }
+console.log(acrescentarIsAdult(person2)); // { name: 'Maria', age: 72, isAdult: true }
+console.log(acrescentarIsAdult(person3)); // { name: 'Natália', age: 17, isAdult: false }
