@@ -63,3 +63,4 @@ const averageHigh = students.filter(student => {
 })
 .map(student => student.name);
 console.log("Estudantes com média acima de 85:", averageHigh);
+
