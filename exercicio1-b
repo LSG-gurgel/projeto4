@@ -1,0 +1,10 @@
+//Crie uma função que aceita múltiplos arrays como parâmetros e retorna um array combinado com todos os elementos (use rest e spread)
+function combinarArrays(...arrays) {
+  return [].concat(...arrays);
+}
+const azuis = ["azul royal","azul celeste","azul marinho"];
+const rosas = ["rosa claro","rosa pink"];
+const verdes = ["verde militar","verde esmeralda","verde limão"];
+
+const todasCores = combinarArrays(azuis, rosas, verdes);
+console.log ("Todas as cores são:", todasCores); // [royal, celeste, marinho, claro, pink, militar, esmeralda, limão]
